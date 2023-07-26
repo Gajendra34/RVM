@@ -16,7 +16,7 @@ function Forgotpass() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:3494/forgotpassword', data)
+        axios.post('https://rvmserver.onrender.com/forgotpassword', data)
             .then(res => {
                 if (res.data.Status === 'Success') {
                     alert(res.data.Status)

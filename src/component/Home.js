@@ -37,7 +37,7 @@ function Dashboard() {
     axios.defaults.withCredentials = true;
 
     useEffect(() => {
-        axios.get('http://localhost:3494/')
+        axios.get('https://rvmserver.onrender.com/')
             .then(res => {
                 if (res.data.Status === 'Success') {
                     if (res.data.role === 'customer') {
@@ -57,7 +57,7 @@ function Dashboard() {
                 }
             })
 
-        axios.get('http://localhost:3494/getproduct')
+        axios.get('https://rvmserver.onrender.com/getproduct')
             .then(res => {
                 if (res.data.Status === 'Success') {
                     setData(res.data.Result)
@@ -68,17 +68,17 @@ function Dashboard() {
             })
 
 
-        axios.get('http://localhost:3494/tot_pro_atc')
+        axios.get('https://rvmserver.onrender.com/tot_pro_atc')
             .then(res => {
                 setTot_pro_atc(res.data[0].tot_pro)
             })
             .catch(err => {
                 console.log(err);
             })
-    })
+    },[])
 
     const handleLogout = () => {
-        axios.get('http://localhost:3494/logout')
+        axios.get('https://rvmserver.onrender.com/logout')
             .then(res => {
                 setAuth(false)
             })
@@ -86,7 +86,7 @@ function Dashboard() {
     }
 
     const addtocart = (id) => {
-        axios.post('http://localhost:3494/atc/' + id)
+        axios.post('https://rvmserver.onrender.com/atc/' + id)
             .then(res => {
                 if (res.data.Status === 'Success') {
                     // navigate('/' + id)
@@ -109,7 +109,7 @@ function Dashboard() {
     }
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3494/pro_delete/' + id)
+        axios.delete('https://rvmserver.onrender.com/pro_delete/' + id)
             .then(res => {
                 if (res.data.Status === "Success") {
                     // window.location.reload(true);
@@ -176,7 +176,7 @@ function Dashboard() {
                                                 </li>
                                             </ul>
 
-                                            {<img src={'http://localhost:3494/images/' + image}
+                                            {<img src={'https://rvmserver.onrender.com/images/' + image}
                                                 className=" rounded-circle" height="38" alt="Rv" />}
 
                                             <div className="text-primary">{firstname}</div>
@@ -211,7 +211,7 @@ function Dashboard() {
                         {
                             data.map((user, index) => {
                                 return <Card key={index} className="cross-button1 edit-button1 mb-3" style={{ width: '42vh', height: "80vh", border: '0px solid' }}>
-                                    <Card.Img className="mt-2" variant="top" src={'http://localhost:3494/images/' + user.image} style={{ width: '250px', height: '350px', textAlign: "center", margin: "auto" }} />
+                                    <Card.Img className="mt-2" variant="top" src={'https://rvmserver.onrender.com/images/' + user.image} style={{ width: '250px', height: '350px', textAlign: "center", margin: "auto" }} />
 
                                     {
                                         cross ?

@@ -28,7 +28,7 @@ function Signup() {
     formData.append("image", values.image);
 
 
-    axios.post('http://localhost:3494/signup', formData)
+    axios.post('https://rvmserver.onrender.com/signup', formData)
       .then(res => {
         if (res.data.Status === 'Success') {
           navigate('/Login')

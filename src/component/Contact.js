@@ -31,7 +31,7 @@ function Contact() {
     axios.defaults.withCredentials = true;
 
     useEffect(() => {
-        axios.get('http://localhost:3494/')
+        axios.get('https://rvmserver.onrender.com/')
             .then(res => {
                 if (res.data.Status === 'Success') {
                     if (res.data.role === 'customer') {
@@ -46,11 +46,11 @@ function Contact() {
                     navigate('/login')
                 }
             })
-    })
+    },[])
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:3494/contact', data)
+        axios.post('https://rvmserver.onrender.com/contact', data)
             .then(res => {
                 if (res.data.Status === 'Success') {
                     setAuth(true)

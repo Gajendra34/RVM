@@ -27,7 +27,7 @@ function AddProduct() {
         formData.append("image", data.image);
 
 
-        axios.post('http://localhost:3494/add_product', formData)
+        axios.post('https://rvmserver.onrender.com/add_product', formData)
             .then(res => {
                 if (res.data.Status === 'Success') {
                     navigate('/')
@@ -44,7 +44,7 @@ function AddProduct() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:3494/addproduct_page')
+        axios.get('https://rvmserver.onrender.com/addproduct_page')
             .then(res => {
                 if (res.data.Status === 'Success') {
                     if (res.data.role === 'customer') {
@@ -58,7 +58,7 @@ function AddProduct() {
                     navigate('/')
                 }
             })
-    })
+    },[])
 
 
 
@@ -68,7 +68,7 @@ function AddProduct() {
     const [all_user, setAll_user] = useState('');
 
     useEffect(() => {
-        axios.get('http://localhost:3494/all_cate')
+        axios.get('https://rvmserver.onrender.com/all_cate')
             .then(res => {
                 setAll_cate(res.data[0].cate)
             })
@@ -76,7 +76,7 @@ function AddProduct() {
                 console.log(err);
             })
 
-        axios.get('http://localhost:3494/all_item')
+        axios.get('https://rvmserver.onrender.com/all_item')
             .then(res => {
                 setAll_item(res.data[0].item)
             })
@@ -84,7 +84,7 @@ function AddProduct() {
                 console.log(err);
             })
 
-        axios.get('http://localhost:3494/all_user')
+        axios.get('https://rvmserver.onrender.com/all_user')
             .then(res => {
                 setAll_user(res.data[0].user)
             })

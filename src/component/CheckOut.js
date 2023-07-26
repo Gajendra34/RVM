@@ -60,7 +60,7 @@ function CheckOut() {
         // formData.append("country", data.country);
         // formData.append("zip_code", data.zip_code);
 
-        axios.post('http://localhost:3494/checkout', data)
+        axios.post('https://rvmserver.onrender.com/checkout', data)
             .then(res => {
                 if (res.data.Status === 'Success') {
                     // navigate('/')
@@ -82,7 +82,7 @@ function CheckOut() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:3494/')
+        axios.get('https://rvmserver.onrender.com/')
             .then(res => {
                 if (res.data.Status === 'Success') {
                     if (res.data.role === 'customer') {
@@ -102,7 +102,7 @@ function CheckOut() {
 
 
 
-        axios.get('http://localhost:3494/addtocart')
+        axios.get('https://rvmserver.onrender.com/addtocart')
             .then(res => {
                 if (res.data.Status === 'Success') {
                     setData1(res.data.Result)
@@ -112,7 +112,7 @@ function CheckOut() {
                 }
             }).catch(err => console.log(err))
 
-        axios.get('http://localhost:3494/tot_pro_atc')
+        axios.get('https://rvmserver.onrender.com/tot_pro_atc')
             .then(res => {
                 setTot_pro_atc(res.data[0].tot_pro)
             })
@@ -120,7 +120,7 @@ function CheckOut() {
                 console.log(err);
             })
 
-        axios.get('http://localhost:3494/tot_price_atc')
+        axios.get('https://rvmserver.onrender.com/tot_price_atc')
             .then(res => {
                 setTot_price_atc(res.data[0].tot_price)
             })
@@ -128,7 +128,7 @@ function CheckOut() {
                 console.log(err);
             })
 
-    })
+    },[])
 
 
 
@@ -140,7 +140,7 @@ function CheckOut() {
 
 
     const genbill = () => {
-        axios.get('http://localhost:3494/genbill')
+        axios.get('https://rvmserver.onrender.com/genbill')
             .then(res => {
                 if (res.data.Status === 'Success') {
                     setAuth(true)
@@ -153,7 +153,7 @@ function CheckOut() {
     }
 
     const del_atc_item = () => {
-        axios.get('http://localhost:3494/del_atc_item')
+        axios.get('https://rvmserver.onrender.com/del_atc_item')
             .then(res => {
                 // console.log(res)
             }).catch(err => console.log(err))
@@ -444,7 +444,7 @@ function CheckOut() {
                                                             data1.map((product, index) => {
                                                                 return <>  <div key={index} className="d-flex align-items-center mb-4">
                                                                     <div className="me-3 position-relative">
-                                                                        <img src={'http://localhost:3494/images/' + product.image} style={{ height: '96px', width: '96px' }} className="img-sm rounded border" />
+                                                                        <img src={'https://rvmserver.onrender.com/images/' + product.image} style={{ height: '96px', width: '96px' }} className="img-sm rounded border" />
                                                                     </div>
                                                                     <div className="">
                                                                         <div className="nav-link text-muted">
@@ -633,7 +633,7 @@ function CheckOut() {
                                                 data1.map((product, index) => {
                                                     return <>  <div key={index} className="d-flex align-items-center mb-4">
                                                         <div className="me-3 position-relative">
-                                                            <img src={'http://localhost:3494/images/' + product.image} style={{ height: '96px', width: '96px' }} className="img-sm rounded border" />
+                                                            <img src={'https://rvmserver.onrender.com/images/' + product.image} style={{ height: '96px', width: '96px' }} className="img-sm rounded border" />
                                                         </div>
                                                         <div className="">
                                                             <div className="nav-link text-muted">

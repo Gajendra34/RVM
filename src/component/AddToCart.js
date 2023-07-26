@@ -23,7 +23,7 @@ function AddToCart() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:3494/addtocart')
+        axios.get('https://rvmserver.onrender.com/addtocart')
             .then(res => {
                 if (res.data.Status === 'Success') {
                     setData(res.data.Result)
@@ -35,7 +35,7 @@ function AddToCart() {
 
 
 
-        axios.get('http://localhost:3494/tot_pro_atc')
+        axios.get('https://rvmserver.onrender.com/tot_pro_atc')
             .then(res => {
                 setTot_pro_atc(res.data[0].tot_pro)
             })
@@ -43,7 +43,7 @@ function AddToCart() {
                 console.log(err);
             })
 
-        axios.get('http://localhost:3494/tot_price_atc')
+        axios.get('https://rvmserver.onrender.com/tot_price_atc')
             .then(res => {
                 setTot_price_atc(res.data[0].tot_price)
             })
@@ -51,10 +51,10 @@ function AddToCart() {
                 console.log(err);
             })
 
-    })
+    },[])
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3494/pro_delete_atc/' + id)
+        axios.delete('https://rvmserver.onrender.com/pro_delete_atc/' + id)
             .then(res => {
                 if (res.data.Status === "Success") {
                     // window.location.reload(true);
@@ -139,7 +139,7 @@ function AddToCart() {
                                                             <div class="row mb-4 d-flex justify-content-between align-items-center">
                                                                 <div class="col-md-2 col-lg-2 col-xl-2">
                                                                     <img
-                                                                        src={'http://localhost:3494/images/' + product.image}
+                                                                        src={'https://rvmserver.onrender.com/images/' + product.image}
                                                                         class="img-fluid rounded-3" alt="Cotton T-shirt" />
                                                                 </div>
                                                                 <div class="col-md-3 col-lg-3 col-xl-3">
