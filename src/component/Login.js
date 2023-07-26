@@ -71,8 +71,8 @@ function Login() {
 
 
             <section >
-                <div className="container py-5 h-100">
-                    <div className="row d-flex align-items-center justify-content-center h-100">
+                <div className="container py-5">
+                    <div className="row d-flex align-items-center justify-content-center ">
                         <div className="col-md-8 col-lg-7 col-xl-6">
                             <img src="https://www.oswalsoap.com/assets/frontend/main_css/images/banner/06.png"
                                 className="img-fluid" width={"90%"} alt="Phone image" />
