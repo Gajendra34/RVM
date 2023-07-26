@@ -1,0 +1,160 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width:991px) {
+  .sidebar {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(22px);
+  }
+}
+
+
+.running {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  /* position: relative; */
+  /* z-index: 1;
+  top: 45px;
+  width: 100%; */
+  height: 44px;
+}
+
+
+.navbar11 {
+  position: relative;
+  top: -8px;
+}
+
+.li1 a {
+  text-decoration: none;
+  color: black;
+  background-image: linear-gradient(black, black);
+  background-size: 0% 2px;
+  background-position-y: 80%;
+  background-position-x: 50%;
+  /* background-position-x: 50%; */
+  background-repeat: no-repeat;
+  transition: 0.2s;
+}
+
+.li1 a:hover {
+  background-size: 76% 2px;
+  size: 20px;
+}
+
+.banner {
+  position: relative;
+  top: -16px;
+}
+
+.rating-star {
+  font-size: 1.5rem;
+  /* width: 3rem; */
+  /* height: 3rem; */
+  padding: 2px;
+  position: relative;
+  right: 4px;
+  bottom: 10px;
+  /* display: block; */
+  /* float:left; */
+}
+
+.full-star:before {
+  color: #f2b01e;
+  content: "\2605";
+  /* position: absolute;
+  left: 0; */
+  /* overflow: hidden; */
+}
+
+
+
+.add_pro {
+  background-image: url('https://wallpapercave.com/dwp1x/wp3248705.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+
+
+
+.working-panel {
+  background-image: url('https://wallpapercave.com/dwp1x/wp3537578.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 52%;
+  /* height: 200px; */
+}
+
+.cross-button2 {
+  position: absolute;
+  left: 252px;
+  bottom: 558px;
+  cursor: pointer;
+  /* display: none; */
+  /* overflow: hidden; */
+  visibility: hidden;
+}
+
+.cross-button1:hover .cross-button2 {
+  visibility: visible;
+}
+
+.cart-qty {
+  background: #ff5252;
+  border-radius: 50%;
+  /* size: 100%; */
+  color: #fff;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 17px;
+  position: relative;
+  text-align: center;
+  bottom: 10px;
+  left: -5px;
+  height: 17px;
+  width: 17px;
+}
+
+
+
+
