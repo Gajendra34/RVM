@@ -11,21 +11,21 @@ function banner() {
                 </div>
                 <div className="banner carousel-inner">
                     <div className="carousel-item active" data-bs-interval="4000">
-                        <img src="https://wallpapercave.com/wp/wp12352641.jpg" height="610px" className="d-block w-100" alt="..." />
+                        <img src="https://wallpapercave.com/dwp1x/wp11878553.png" height="610px" className="d-block w-100" alt="..." />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>First slide label</h5>
                             <p>Some representative placeholder content for the first slide.</p>
                         </div>
                     </div>
                     <div className="carousel-item" data-bs-interval="2000">
-                        <img src="https://wallpapercave.com/dwp1x/wp6488829.jpg" className="d-block w-100" height="610px" alt="..." />
+                        <img src="https://wallpapercave.com/dwp1x/wp11711995.jpg" className="d-block w-100" height="610px" alt="..." />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Second slide label</h5>
                             <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                     <div className="carousel-item">
-                        <img src="https://wallpapercave.com/wp/wp12353453.jpg" className="d-block w-100" height="610px" alt="..." />
+                        <img src="https://wallpapercave.com/dwp1x/wp7566293.jpg" className="d-block w-100" height="610px" alt="..." />
                         <div className="carousel-caption d-none d-md-block">
                             <h5>Third slide label</h5>
                             <p>Some representative placeholder content for the third slide.</p>
