@@ -213,11 +213,11 @@ function Dashboard() {
                                 return <Card key={index} className="cross-button1 edit-button1 mb-3" style={{ width: '42vh', height: "80vh", border: '0px solid' }}>
                                     <Card.Img className="mt-2" variant="top" src={'https://rvmserver.onrender.com/images/' + user.image} style={{ width: '250px', height: '350px', textAlign: "center", margin: "auto" }} />
 
-                                    {
+                                    {/* {
                                         cross ?
                                             <i title='Delete Item' onClick={e => handleDelete(user.product_id)} className='cross-button2 bi bi-x'></i>
                                             : (<></>)
-                                    }
+                                    } */}
 
 
                                     <Card.Body className=''>
