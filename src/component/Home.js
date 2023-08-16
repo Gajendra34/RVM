@@ -15,6 +15,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+import ClipLoader from "react-spinners/ClipLoader";
+
+
+
 
 
 function Dashboard() {
@@ -33,6 +37,7 @@ function Dashboard() {
     const [auth, setAuth] = useState('')
     const [firstname, setFirstname] = useState('')
     const [image, setImage] = useState('')
+    const [loading, setLoading] = useState(true)
 
     axios.defaults.withCredentials = true;
 
@@ -61,6 +66,7 @@ function Dashboard() {
             .then(res => {
                 if (res.data.Status === 'Success') {
                     setData(res.data.Result)
+                    setLoading(false);
                 }
                 else {
                     alert('Error in add item');
@@ -75,7 +81,7 @@ function Dashboard() {
             .catch(err => {
                 console.log(err);
             })
-    },[])
+    }, [])
 
     const handleLogout = () => {
         axios.get('https://rvmserver.onrender.com/logout')
@@ -138,7 +144,7 @@ function Dashboard() {
                     <p>50% off Sale Women Men | Free shipping on $75+ <a style={{ color: "white" }} href="">Details</a></p>
                 </marquee>
             </div>
-            
+
             <nav className="navbar navbar-expand-lg bg-body-tertiary bg-transparent w-100">
                 <div className="navbar11 container-fluid bg-warning">
                     <Link to="/" title='rVm Collection' className="navbar-brand fs-4 p-3"><img src={logo} width="80px" /></Link>
@@ -205,6 +211,18 @@ function Dashboard() {
                         <h1>Featured Products</h1>
                         <p className="fs-5">Collection New Modern Design</p>
                     </header>
+
+
+                    <div class="row d-flex justify-content-center">
+                        <ClipLoader
+                            color="#36d7b7"
+                            loading={loading}
+                            size={60}
+                            aria-label="Loading Spinner"
+                            data-testid="loader"
+                        />
+                    </div>
+
 
 
                     <div className="row container" style={{ display: 'flex' }}>
